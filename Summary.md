@@ -25,4 +25,8 @@
     4- Create the build steps to "cloudbuild.yaml" File.
           4.1- Build the Docker Image using docker build command.
           4.2- Push this Image to Google Container Registry (gcr).
-    5- 
+    5- Set up Cloud Build Trigger to trigger Cloud Build when the Code is mereged into Master.
+    6- Create Kuberenets Files(Deployment and Service).
+    7- Adjust the cloud-build.yaml file to deploy the docker image on the Kubernetes Cluster.
+    
+    

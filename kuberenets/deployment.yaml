@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: GCP-DevOps-deployment
+  labels:
+    app: GCP-DevOps
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: GCP-DevOps
+  template:
+    metadata:
+      labels:
+        app: GCP-DevOps
+    spec:
+      containers:
+      - name: GCP-DevOps
+        image: gcr.io/playground-s-11-d28be5bc/gcpcicdimages:latest
+        ports:
+        - containerPort: 5000
